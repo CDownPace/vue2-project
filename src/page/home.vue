@@ -2,18 +2,46 @@
     <div id="app">
         KK
         <hello-world :owner="question" :pic-count="10" :disableEdit="false" />
+        <city-list :cityList="cityList"></city-list>
     </div>
 </template>
   
 <script>
 import HelloWorld from '../components/HelloWorld'
+import CityList from '../components/CityList.vue'
 export default {
     name: 'App',
     components: {
-        HelloWorld
+        HelloWorld,
+        CityList
     },
     data() {
         return {
+            cityList:[
+                {id: 1, name: "北京市", nameEn: "Beijing"},
+                {id: 50, name: "长春市", nameEn: "Changchun"},
+                {id: 183, name: "长沙市", nameEn: "Changsha"},
+                {id: 77, name: "常州市", nameEn: "Changzhou"},
+                {id: 238, name: "成都市", nameEn: "Chengdu"},
+                {id: 235, name: "重庆市", nameEn: "Chongqing"},
+                {id: 37, name: "大连市", nameEn: "Dalian"},
+                {id: 213, name: "东莞市", nameEn: "Dongguan"},
+                {id: 139, name: "东营市", nameEn: "Dongying"},
+                {id: 2, name: "石家庄市", nameEn: "Shijiazhuang"},
+                {id: 3, name: "唐山市", nameEn: "Tangshan"},
+                {id: 11, name: "廊坊市", nameEn: "Langfang"},
+                {id: 13, name: "太原市", nameEn: "Taiyuan"},
+                {id: 24, name: "呼和浩特市", nameEn: "Hohhot"},
+                {id: 36, name: "沈阳市", nameEn: "Shenyang"},
+                {id: 59, name: "哈尔滨市", nameEn: "Harbin"},
+                {id: 72, name: "上海市", nameEn: "Shanghai"},
+                {id: 74, name: "南京市", nameEn: "Nanjing"},
+                {id: 75, name: "无锡市", nameEn: "Wuxi"},
+                {id: 76, name: "徐州市", nameEn: "Xuzhou"},
+                {id: 78, name: "苏州市", nameEn: "Suzhou"},
+                {id: 218, name: "南宁市", nameEn: "Nanning"}
+        
+        ],
             // question: {
             //     "checked": true,
             //     "comments": "部分货架和保护装置存在变型。",
